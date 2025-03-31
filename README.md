@@ -5,9 +5,8 @@ Este projeto implementa o **Critério de Routh-Hurwitz** em Python para determin
 ## Sobre o Método de Routh-Hurwitz
 O critério de Routh-Hurwitz é usado para verificar a estabilidade de um sistema dinâmico analisando o polinômio característico do denominador da função de transferência:
 
-\[
-P(s) = a_n s^n + a_{n-1} s^{n-1} + \dots + a_1 s + a_0
-\]
+$P(s) = a_n s^n + a_{n-1} s^{n-1} + \dots + a_1 s + a_0$
+
 
 O sistema é **estável** se e somente se todos os polos tiverem parte real negativa, o que acontece quando todos os elementos da primeira coluna da Tabela de Routh têm o mesmo sinal.
 
@@ -16,9 +15,8 @@ O sistema é **estável** se e somente se todos os polos tiverem parte real nega
 2. A segunda linha contém os coeficientes restantes.
 3. As linhas subsequentes são preenchidas utilizando a equação:
 
-\[
-R_{i,j} = \frac{(R_{i-2,1} \cdot R_{i-1,j+1}) - (R_{i-1,1} \cdot R_{i-2,j+1})}{R_{i-1,1}}
-\]
+
+$R_{i,j} = \frac{(R_{i-2,1} \cdot R_{i-1,j+1}) - (R_{i-1,1} \cdot R_{i-2,j+1})}{R_{i-1,1}}$
 
 onde \( R_{i,j} \) representa os elementos da Tabela de Routh.
 
@@ -43,10 +41,10 @@ Após construir a tabela, observamos a **primeira coluna**:
 - Biblioteca NumPy
 
 ### Passos
-1. Clone este repositório ou baixe o arquivo `main.py`.
+1. Clone este repositório `https://github.com/RodrigoSantosB/APS-Servo-Mecanismos.git`.
 2. Execute o código com o seguinte comando:
    ```bash
-   python main.py
+   python3 main.py
    ```
 3. O programa exibirá um menu interativo:
    - **Opção 1:** Permite inserir os coeficientes do polinômio.
