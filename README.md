@@ -51,18 +51,21 @@ Após construir a tabela, observamos a **primeira coluna**:
    - **Opção 2:** Encerra a execução.
 
 ### Exemplo de Uso
-Ao rodar o programa e inserir os coeficientes `1 3 2 6 5`, a saída pode ser:
+Ao rodar o programa e inserir os coeficientes `3 9 6 4 7 8 2 6`, a saída pode ser:
 ```
 Matriz de entrada:
-[1. 3. 2. 6. 5.]
+[3. 9. 6. 4. 7. 8. 2. 6.]
 
 Tabela de Routh-Hurwitz:
-| 1.0000  | 2.0000 | 5.0000 |
-| 3.0000  | 6.0000 | 0      |
-| -4.0000 | 5.0000 | 0      |
-| 7.0000  | 0      | 0      |
-| -5.0000 | 0      | 0      |
+| 3.         | 6.          |7.          |2.        |
+| 9.         | 4.          |8.          |6.        |
+| 4.66666667 | 4.33333333  |0.          |0.        |
+|-4.35714286 | 8.          |6.          |0.        |
+|12.90163934 | 6.42622951  |0.          |0.        |
+|10.17026684 | 6.          |0.          |0.        |
+|-1.18515742 | 0.          |0.          |0.        |
+| 6.         | 0.          |0.          |0.        |
 
 Resultado:
-Sistema Instável com 3 polos no semiplano direito.
+Sistema Instável com 4 polos no semiplano direito.
 ```

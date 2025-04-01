@@ -3,31 +3,23 @@ from RouthHurwitzAlgorithm import routh_hurwitz
 
 
 def main():
+    # Menu interativo para entrada dos coeficientes
     while True:
-        print("\n=== Menu ===")
-        print("1. Calcular estabilidade de um sistema")
+        print("\nAnálise de Estabilidade pelo Método de Routh-Hurwitz")
+        print("1. Inserir coeficientes do polinômio")
         print("2. Sair")
         opcao = input("Escolha uma opção: ")
         
-        if opcao == "2":
-            print("Encerrando o programa...")
+        if opcao == "1":
+            coef_str = input("Digite os coeficientes do polinômio separados por espaço: ")
+            coeffs = list(map(float, coef_str.split()))
+            routh_hurwitz(coeffs)
+        elif opcao == "2":
+            print("Saindo...")
             break
-        elif opcao == "1":
-            try:
-                entrada = input("Digite os coeficientes do polinômio separados por espaço: ")
-                coefficients = list(map(float, entrada.split()))
-                resultado, tabela = routh_hurwitz(coefficients)
-                
-                print("\nMatriz de entrada:")
-                print(np.array(coefficients))
-                print("\nTabela de Routh-Hurwitz:")
-                print(tabela)
-                print("\nResultado:")
-                print(resultado)
-            except Exception as e:
-                print("Erro ao processar a entrada. Certifique-se de inserir coeficientes válidos.", e)
         else:
-            print("Opção inválida. Tente novamente.")
+            print("Opção inválida! Tente novamente.")
+
 
 if __name__ == "__main__":
     main()
